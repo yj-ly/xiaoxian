@@ -1,0 +1,65 @@
+<view class='discount_con'>
+    <view class='main'>
+        <!-- tab -->
+
+        <view class='tab_con'>
+            <view data-num='0'  class="{{type == 0?'ac':''}}" bindtap='chageType'>我的优惠券</view>
+            <view  data-num='1'  class="{{type == 1?'ac':''}}" bindtap='chageType'>待领优惠券</view>
+            <view  data-num='2'  class="{{type == 2?'ac':''}}" bindtap='chageType'>兑换</view>
+        </view>
+
+        <!-- 我的优惠券 -->
+        <view class='list_con' wx:if="{{type == 0 && list.length > 0}}">
+            <view class='list_item' wx:for="{{list}}" wx:key="{{index}}"   >
+                <view class='list_top' data-title="{{item.id}}">
+                    <image src='/pages/imgs/my_discounts.png'></image>
+                    <view class='item_money'>
+                        <text>{{item.desc}}</text>
+                        <view class='money'>{{item.money}}元</view>
+                    </view>
+                    <!-- <view class='get_money' bindtap='getMoney' >立即领取</view> -->
+                </view>
+
+                <view class='list_tit'>领取条件:连续打卡20天即可领取</view>
+            
+            </view>
+        </view>
+
+        <!-- 待领取优惠券 -->
+        <view class='list_con' wx:if="{{type == 1}}">
+                        <view class='list_item'>
+                <view class='list_top'>
+                    <image src='/pages/imgs/my_discounts.png'></image>
+                    <view class='item_money'>
+                        <text>消费抵用券</text>
+                        <view class='money'>20元</view>
+                    </view>
+
+                    <view class='get_money not_click'>不可领取</view>
+                </view>
+
+                <view class='list_tit'>领取条件:连续打卡20天即可领取</view>
+            
+            </view>
+        </view>
+
+
+          <!-- 兑换 -->
+          <view class='conversion' wx:if="{{type == 2}}">
+              
+              <view class='input_con'>
+                   <input placeholder='请输入兑换的编码'   placeholder-style="font-size:30rpx;color:#cccccc;"  bindinput='changeText'></input>
+              </view>
+              <view class='btn' bindtap='exchange'>兑换</view>
+          
+          </view>
+
+        <!-- 我的优惠券没有数据的时候 -->
+        <view class='not_list' wx:if="{{type == 0 && list.length == 0}}">
+            <image src='/pages/imgs/discounts.png'></image>
+            <text>你还没有可用的优惠券</text>
+            <view class='ticket' bindtap='chageType' data-num='2' >去领券</view> 
+        </view>
+    </view>
+
+</view>

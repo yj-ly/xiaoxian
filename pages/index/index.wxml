@@ -1,0 +1,13 @@
+<block wx:if="{{isShow}}">
+
+
+  <view class='login-logo'>
+    <image src='/images/login-logo.png'></image>
+  </view>
+  <view class='login-tit'>快来小鲜</view>
+  <view class='login-tip'>您暂未获取微信授权,将无法正常使用小程序的功能。
+如需正常使用,请点击"授权登录"按钮，打开头像,
+昵称等信息的授权。</view>
+    <button  open-type="getUserInfo"  bindgetuserinfo="applyLogin" class='login-btn'>授权登录</button>
+</block>
+

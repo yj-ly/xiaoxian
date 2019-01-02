@@ -1,0 +1,141 @@
+<view class="clock_in">
+  <view class='main'>
+
+    <!-- 今日打卡热词 -->
+    <view class='clockin_top'>
+      <view class='clockin_tit'>
+        <view class=' vertical_bar'></view>
+        <text>今日打卡高频调</text>
+      </view>
+
+      <view class='clockin_con'>
+        <view class='clockin_item'>尝试</view>
+        <view class='clockin_item'>勇敢</view>
+        <view class='clockin_item'>亲密关系</view>
+      </view>
+    </view>
+
+    <!-- 打卡营 -->
+    <view class='clockin_camp '>
+      <view class='tit'>参与的打卡营</view>
+
+      <view class='clockin_camp_con'>
+
+        <view class='clickin_camp_item'>
+          <image src='/pages/imgs/study1.png'></image>
+          <view class='item_detail'>
+            <view class='item_detail_tit'>打卡营名称</view>
+            <view class='clockin_camp_time'>
+              2018.12.12-2018.12.123
+            </view>
+            <view class='participation'>
+              第81天 | 共90天 | 999人参与 | 9999次打卡
+            </view>
+
+            <view class='clickin_camp_bot'>
+              <view class='clockin_left'>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+              </view>
+
+              <navigator url='' class='go_clockin'>去打卡</navigator>
+
+            </view>
+          </view>
+
+
+
+
+        </view>
+
+        <!--添加更多训练营-->
+        <view class='add_more_study'>
+          <navigator url='' class='add_more_href'>
+            <image src='/pages/imgs/add.png'></image>
+            <view class='add_txt'>加入更多训练营 </view>
+          </navigator>
+        </view>
+      </view>
+
+
+
+    </view>
+    <!-- 打卡营结束 -->
+
+    <!-- 参与的课程 -->
+    <view class='study_con'>
+      <view class='tit'>参与的课程学习</view>
+      <view class='clockin_camp_con'>
+
+        <view class='clickin_camp_item'>
+          <image src='/pages/imgs/study1.png'></image>
+          <view class='item_detail'>
+            <view class='item_detail_tit'>学习课程名称</view>
+            <view class='participation'>
+              第81天 | 共90天 | 999人参与 | 9999次打卡
+            </view>
+
+            <view class='clickin_camp_bot'>
+              <view class='clockin_left'>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+              </view>
+
+              <navigator url='' class='go_clockin'>去打卡</navigator>
+
+            </view>
+          </view>
+
+        </view>
+        <!--添加更多训练营-->
+        <view class='add_more_study'>
+          <navigator url='' class='add_more_href'>
+            <image src='/pages/imgs/add.png'></image>
+            <view class='add_txt'>加入更多训练营 </view>
+          </navigator>
+        </view>
+
+      </view>
+
+
+    </view>
+    <!-- 参与的课程结束 -->
+
+    <!-- 系列的推荐课程 -->
+    <view class='course_con'>
+      <view class='course_top'>
+        <view class='vertical_border'></view>
+        <text>系列课推荐</text>
+      </view>
+      <view class='course_bot'>
+        <view class='course_left'>
+          <image src='/pages/imgs/study3.png'></image>
+          <view>999人参与999人学习</view>
+        </view>
+
+        <view class='course_right'>
+          <view class='book_name'>https://www.grs666 .com/api /v2/app/common/ag reement/ lists</view>
+          <view class='join_con'>
+            <view class='join_btn'>加入</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <!-- 系列的推荐课程结束 -->
+
+
+
+  </view>
+
+
+  <!--自定义底部tabr  -->
+  <import src="../compontent/footertab/footertab.wxml" />
+  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+</view>

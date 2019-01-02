@@ -1,0 +1,253 @@
+<view class='content_my'>
+  <view class='main'>
+    <!--用户信息  -->
+    <view class="user_msg {{userModel.frontCover == '' ? 'judgeUserBackground' : ''}}">
+
+    <image src='{{userModel.frontCover}}' wx:if="{{userModel.frontCover != ''}}" class='user_mood_img'></image>
+      <view class='grow_time'>今天是我们共同成长的第100天哦~</view>
+
+      <!--头像加签到  -->
+      <view class='user_img_con'>
+        <view class='user_img_left' bindtap='showSign' wx:if="{{userModel.isSignIn == 0}}">
+          <view class='sign_btn' >
+            <image class='sign_img' src='/pages/imgs/sign.png'></image>
+            <text>+{{configNum}}</text>
+          </view>
+
+          <view class='login_sign' bindtap='showSigIn'>登录签到</view>
+
+        </view>
+
+
+        <view class="user_img {{userModel.isSignIn == 1 ? 'margin_left' : ''}}" bindtap='goChangeUserMsg'>
+          <image src='{{userModel.picture}}'></image>
+          <view class='message_num'>1</view>
+        </view>
+
+      </view>
+
+      <!--问候语加名字  -->
+      <view class='user_name_con' >
+        <view class='greetings'>
+         {{userModel.nick}}
+        </view>
+        <view class='profession'>
+          <text>v{{userModel.level}}</text>
+          <view class='profession_txt' wx:if="{{userModel.tags != ''}}">{{userModel.tags}}</view>
+        </view>
+
+      </view>
+
+      <!--个人签名  -->
+      <view class='signature'>{{userModel.signs}}</view>
+    </view>
+
+
+    <!--训练次数和相应的积分-->
+    <view class='operation_con'>
+
+      <!--打卡次数  -->
+      <view class='operation_num'>
+        打卡
+        <text>1天</text>/训练营
+        <text>1次</text>/解锁课程
+        <text>1节</text>/系列课
+        <text>1次</text>
+      </view>
+
+      <!--各种的积分  -->
+      <view class='property_con'>
+        <view class='property_item'>
+          <navigator url='/pages/discount/discount'>
+            <text>{{userModel.couponNum}}</text>
+            <view>优惠券</view>
+          </navigator>
+        </view>
+
+        <view class='property_item'>
+          <navigator url='/pages/integral/integral'>
+            <text>{{userModel.integral}}</text>
+            <view>积分</view>
+          </navigator>
+        </view>
+
+        <view class='property_item'>
+          <navigator url=''>
+            <text>{{userModel.medalNum}}</text>
+            <view>勋章</view>
+          </navigator>
+        </view>
+
+        <view class='property_item'>
+          <navigator url='/pages/regret/regret'>
+            <text>{{userModel.regretNum}}</text>
+            <view>后悔药</view>
+          </navigator>
+        </view>
+      </view>
+
+    </view>
+
+    <!--成长 校友 问答  -->
+
+    <view class='grow_con'>
+      <view class='geow_item'>
+        <navigator url='' class='url_item'>
+          <image src='/pages/imgs/oldboy.png'></image>
+          <view>校友录</view>
+        </navigator>
+      </view>
+
+      <view class='geow_item'>
+        <navigator url='' class='url_item'>
+          <image src='/pages/imgs/growup.png'></image>
+          <view>我的成长</view>
+        </navigator>
+      </view>
+
+      <view class='geow_item'>
+        <navigator url='' class='url_item'>
+          <image src='/pages/imgs/questions.png'></image>
+          <view>我的问题</view>
+        </navigator>
+      </view>
+
+    </view>
+
+    <!--推荐给小鲜  -->
+    <view class='recommend'>
+      <view class='recommend_left'>
+        <!--左边的竖线  -->
+        <view class='vertical_border'></view>
+        <text>推荐小鲜给好友</text>
+      </view>
+
+      <view class='recommend_right'>
+        <text>邀请可得20元优惠券</text>
+        <image src='/pages/imgs/more.png'></image>
+      </view>
+
+
+
+    </view>
+
+    <!-- 学习 -->
+    <view class='study_con'>
+      <view class='study_tit_con'>
+        <view class='recently'>最近学习</view>
+        <view class='more_study'>
+          <navigator url='' class='study_more'>
+            <text>更多</text>
+            <image src='/pages/imgs/more.png'></image>
+          </navigator>
+
+        </view>
+      </view>
+
+      <!--学习的每项  -->
+      <view class='study_item'>
+        <image src='/pages/imgs/study1.png'></image>
+        <!--study 记录  -->
+
+        <view class='study_history'>
+          <text>践行训练营</text>
+          <view class='item_history'>2018.12.12-2018.12.12|第81天|99999次打卡</view>
+        </view>
+
+      </view>
+
+      <view class='study_item last_item'>
+        <image src='/pages/imgs/study1.png'></image>
+        <!--study 记录  -->
+
+        <view class='study_history'>
+          <text>拆掉成长路上的认知障碍</text>
+          <view class='item_history'>2018.12.12-2018.12.12|第81天|99999次打卡</view>
+        </view>
+
+      </view>
+
+      <!--添加更多学习内容  -->
+      <view class='add_more_study'>
+        <navigator url='' class='add_more_href'>
+          <image src='/pages/imgs/add.png'></image>
+          <view class='add_txt'>加入更多学习内容 </view>
+        </navigator>
+      </view>
+
+
+    </view>
+
+    <!--系列课程  -->
+    <view class='course_con'>
+      <view class='course_top'>
+        <view class='vertical_border'></view>
+        <text>系列课推荐</text>
+      </view>
+      <view class='course_bot'>
+        <view class='course_left'>
+          <image src='/pages/imgs/study3.png'></image>
+          <view>999人参与999人学习</view>
+        </view>
+
+        <view class='course_right'>
+         
+          <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+          <view class='join_con'>
+            <view class='join_btn'>加入</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <!--跳转的链接  -->
+    <view class='herf_con'>
+      <view class='herf_item'>
+        <navigator url='' class='item_href'>
+          <view class='herf_txt'>
+            <view class='vertical_border'></view>
+            <text>使用帮助</text>
+          </view>
+
+          <view class='item_more'>
+            <image src='/pages/imgs/more.png'></image>
+          </view>
+        </navigator>
+      </view>
+
+      <view class='herf_item'>
+        <navigator url='' class='item_href'>
+          <view class='herf_txt'>
+            <view class='vertical_border'></view>
+            <text>用户协议</text>
+          </view>
+
+          <view class='item_more'>
+            <image src='/pages/imgs/more.png'></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 签到的弹框 -->
+ 
+  <view class='sign_mode' wx:if='{{showSginModel}}'>
+    <view class='model' bindtap='closeSignModel'></view>
+    <view class='model_con'>
+      <view class='title'>成功获得</view>
+      <image src='/pages/imgs/integral_ico.png'></image>
+      <view class='integral_num'>
+        积分+{{configNum}}
+      </view>
+      <view class='get_btn' bindtap='siginBtn'>收下</view>
+
+    </view>
+  </view>
+
+  <!--自定义底部tabr  -->
+  <import src="../compontent/footertab/footertab.wxml" />
+  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+</view>

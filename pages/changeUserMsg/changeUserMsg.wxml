@@ -1,0 +1,46 @@
+<view class='change_content'>
+    <view class='main'>
+      <!-- 心情封面 -->
+      <view class='mood_con'>
+          <view class='mood_tit'>心情封面</view>
+
+          <image src='{{imgSrc}}' class='user_img' wx:if="{{imgSrc != ''}}" ></image>
+
+          <!-- 更换图片 -->
+          <view class='change_img'>
+          <button type="default" size="mini" bindtap="chooseImage" plain="true" >
+             <text>从相册选择</text>
+             <image src='/pages/imgs/more.png'></image>
+          
+          </button>
+            
+          </view>
+
+          <!-- 个性签名 -->
+          <view class='signature'>
+              <view class='signature_top'>
+                  <text>个性签名</text>
+                  <view>{{strLength}}/30</view>
+              </view>
+
+              <view class='input_con'>
+                  <input placeholder='请输入文字' maxlength='30'  placeholder-style="font-size:30rpx" bindinput='changeText' value='{{changeModel.signs}}'></input>
+              </view>
+          </view>
+
+          <!-- 身份标签 -->
+          <view class='identity_tag'>
+              <view class='identity_tit'>身份标签</view>
+              <view class='identity_item' >
+                <view wx:for="{{tagList}}" wx:key="{{index}}" data-title="{{item.title}}" bindtap='setTab' class="{{item.title == changeModel.tags ? 'ac' : ''}}" data-id="{{item.id}}">{{item.title}}</view>
+              </view>
+          </view>
+      
+      </view>
+
+      <!-- 提交按钮 -->
+      <view class='btn' bindtap='changeUserMsg'>确定</view>
+    
+    
+    </view>
+</view>

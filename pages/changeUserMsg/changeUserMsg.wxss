@@ -1,0 +1,92 @@
+.change_content {
+  padding-bottom: 80rpx;
+}
+.main{
+  margin: 0 47rpx 0 65rpx;
+}
+
+.mood_tit {
+  margin: 50rpx 0 39rpx 0;
+  font-size: 30rpx;
+  color: #000000;
+}
+.user_img {
+  margin-bottom: 65rpx;
+  height: 512rpx;
+  width: 100%;
+}
+.change_img {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 23rpx;
+    /* border-bottom: 1px solid #7f7f7f; */
+    align-items: center;
+    margin-bottom: 71rpx;
+}
+.change_img button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  align-items: center;
+  background: none !important;
+}
+.change_img text,.signature_top text,.identity_tit{
+  font-size: 30rpx;
+  color: #333333;
+
+}
+.change_img image{
+   width:14rpx;
+  height:24rpx;
+}
+
+.signature {
+    margin-bottom: 79rpx;
+}
+.signature_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 58rpx;
+}
+.signature_top view{
+  font-size: 30rpx;
+  color: #dddddd;
+}
+.input_con input{
+  padding-bottom: 24rpx;
+   border-bottom: 1px solid #7f7f7f;
+   color: #000000;
+   font-size: 30rpx;
+}
+.identity_item{
+  display: flex;
+  flex-wrap: wrap;
+}
+.identity_tit {
+  margin-bottom: 44rpx;
+}
+.identity_item view{
+  border: 2rpx solid #7f7f7f;
+  border-radius: 10rpx;
+  margin:0 23rpx 38rpx 0;
+  font-size: 30rpx;
+  color: #7f7f7f;
+  padding: 23rpx 14rpx;
+}
+.identity_item  .ac{
+  background: #ffae0b;
+  color: #ffffff;
+  border:1rpx solid #ffae0b;
+}
+.btn {
+  margin: 115rpx  25rpx 0 7rpx;
+  height: 114rpx;
+  border-radius: 57rpx;
+  background: #ffae0b;
+  text-align: center;
+  line-height: 114rpx;
+  letter-spacing: 20rpx;
+  font-size: 45rpx;
+  color: #000000;
+}

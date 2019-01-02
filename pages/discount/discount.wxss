@@ -1,0 +1,146 @@
+.main{
+  margin:0 65rpx;
+}
+.tab_con {
+  display: flex;
+  padding: 0 0 12rpx 0;
+  margin: 0 0 12rpx 0 ;
+}
+.tab_con view{
+  font-size: 30rpx;
+  color: #000000; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.tab_con view:nth-of-type(2){
+  margin: 0 120rpx 0 100rpx;
+}
+.tab_con .ac::after {
+    content: '';
+    position: absolute;
+    width: 117rpx;
+    height: 5rpx;
+    background: #ffae0b;
+    left: 50%;
+    bottom: -12rpx;
+    transform: translateX(-50%);
+}
+.list_item {
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #f7f7f7;
+
+
+}
+.list_top {
+  display: flex;
+  align-items: center;
+  margin: 0 0 23rpx 0;
+  justify-content: space-between;
+}
+.list_top image {
+  width: 233rpx;
+  height: 116rpx;
+  margin: 0 51rpx 0 0;
+}
+.item_money {
+  /* margin: 0 109rpx 0 0; */
+}
+.item_money text{
+  margin-bottom: 23rpx;
+  font-size: 25rpx;
+  color: #000000;
+}
+
+.item_money view{
+  font-size: 48rpx;
+  font-weight: 600;
+}
+.get_money {
+  width: 106rpx;
+  height: 55rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #000000;
+  font-weight: 600;
+  line-height: 55rpx;
+  border-radius: 10rpx;
+  background: #ffae0b;
+}
+
+/* 不可以领取的颜色*/
+ .not_click {
+  background: #d2d2d2;
+}
+.list_tit {
+  font-size: 25rpx;
+  color: #7f7f7f;
+}
+
+.input_con {
+  margin: 145rpx 0 381rpx 0;
+  border-bottom: 2rpx solid #7f7f7f;
+  padding-bottom: 24rpx;
+}
+.input_con input {
+  font-size: 30rpx;
+  color: #000000;
+}
+
+
+/* 兑换 */
+.btn {
+  margin: 115rpx  25rpx 80rpx 7rpx;
+  height: 114rpx;
+  border-radius: 57rpx;
+  background: #ffae0b;
+  text-align: center;
+  line-height: 114rpx;
+  letter-spacing: 20rpx;
+  font-size: 45rpx;
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 没有优惠券的时候 */
+.not_list {
+  margin: 156rpx 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.not_list image {
+  width: 164rpx;
+  height: 164rpx;
+  margin: 0 0 20rpx 0;
+}
+.not_list text{
+  font-size: 30rpx;
+  color: #dddddd;
+  margin-bottom: 211rpx;
+}
+
+.ticket {
+  margin: 0  25rpx 80rpx 7rpx;
+  height: 114rpx;
+  border-radius: 57rpx;
+  background: #ffae0b;
+  text-align: center;
+  line-height: 114rpx;
+  letter-spacing: 20rpx;
+  font-size: 45rpx;
+  color: #000000;
+  width: 100%;
+}

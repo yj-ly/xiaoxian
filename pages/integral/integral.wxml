@@ -1,0 +1,20 @@
+<view class='integral_con'>
+    <view class='main'>
+    <!-- 列表 -->
+        <view class='list_con' wx:if="{{list.length > 0}}" wx:for="{{list}}" wx:key="index">
+            <view class='list_item'>
+                <text class='time'>{{item.createTime}}</text>
+                <text class='login_time'>{{item.desc}}</text>
+                <text class='integral_num'>{{item.direction == -1 ? '-' : '+'}}{{item.money}}</text>
+            </view>
+        </view>
+    
+    </view>
+
+    <!-- 没得数据的时候 -->
+    <view class='not_list' wx:if="{{list.length == 0}}">
+      <image src='/pages/imgs/not_list.png'></image>
+      <view>暂时还没有数据</view>
+    </view>
+
+</view>

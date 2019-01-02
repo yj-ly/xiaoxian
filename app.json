@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/integral/integral",
+    "pages/clockin/clockin",
+    "pages/my/my",
+    "pages/regret/regret",
+    "pages/discover/discover", 
+    "pages/changeUserMsg/changeUserMsg",
+    "pages/discount/discount"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "快来小鲜",
+    "navigationBarTextStyle":"black"
+  }
+}

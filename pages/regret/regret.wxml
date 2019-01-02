@@ -1,0 +1,74 @@
+<view class='regret_con'>
+  <view class='main'>
+    <!-- tab -->
+
+    <view class='tab_con'>
+      <view data-num='0' class="{{type == 0?'ac':''}}" bindtap='chageType'>我的后悔药</view>
+      <view data-num='1' class="{{type == 1?'ac':''}}" bindtap='chageType'>兑换</view>
+
+    </view>
+
+
+    <!-- content -->
+    <view class='content'>
+        <!-- 我的后悔药  -->
+        <view class='my_regret' wx:if="{{type == 0}}">
+
+              <!-- 列表 -->
+              <view class='list_con' wx:if="{{list.length > 0}}">
+                  <view class='list_item' wx:for="{{list}}"  wx:key="index">
+                    <image src='/pages/imgs/regret_ico.png'></image>
+                    <text>{{item.createTime}}</text>
+                  </view>
+              
+              </view>
+
+              <!-- 没有后悔药的时候 -->
+              <view class='not_regret' wx:if="{{list.length == 0}}">
+                  <image src='/pages/imgs/regret_ico.png'></image>
+                  <view class='not_tit'>你还没有后悔药</view>
+                  <view class='btn' bindtap='chageType'  data-num='1'>去兑换</view>
+              </view>
+        
+        
+        </view>
+
+        <!-- 兑换 -->
+        <view class='conversion_con' wx:if="{{type == 1}}">
+            
+            <!-- <view class='conversion_type'>
+                <view class='type_item'>
+                    <text>兑换码兑换</text>
+                    <image src='/pages/imgs/more.png'></image>
+                </view>
+                 <view class='type_item'>
+                    <text>积分兑换</text>
+                    <image src='/pages/imgs/more.png'></image>
+                </view>
+            </view> -->
+
+            <view class='conversion_con_top'>
+                <text>可用积分</text>
+                <text>{{userModel.integral}}</text>
+            </view>
+
+            <!-- 提示好多积分兑换一个后悔药 -->
+            <view class='hind'>
+                {{configNum}}积分可兑换1颗
+            </view>
+
+
+            <!-- btn -->
+            <view class='btn_con'>
+                <button type='default' bindtap='exchange'>兑换</button>
+            
+            </view>
+
+        
+        </view>
+    
+    </view>
+
+
+  </view>
+</view>

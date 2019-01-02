@@ -1,0 +1,124 @@
+.main{
+  margin:0 65rpx;
+}
+.tab_con {
+  display: flex;
+  padding: 0 0 12rpx 0;
+  margin: 0 0 12rpx 0 ;
+}
+.tab_con view{
+  font-size: 30rpx;
+  color: #000000; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.tab_con view:nth-of-type(2){
+  margin: 0 120rpx;
+}
+.tab_con .ac::after {
+    content: '';
+    position: absolute;
+    width: 117rpx;
+    height: 5rpx;
+    background: #ffae0b;
+    left: 50%;
+    bottom: -12rpx;
+    transform: translateX(-50%);
+}
+
+/* 没有后悔药 */
+.not_regret {
+  margin: 170rpx 0 0 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.not_regret image {
+  width: 135rpx;
+  height: 135rpx;
+  margin: 0 0 35rpx 0;
+}
+.not_regret .not_tit {
+  font-size: 30rpx;
+  color: #7f7f7f;
+  margin: 0 0 211rpx 0;
+
+}
+
+.btn {
+  margin: 115rpx  25rpx 80rpx 7rpx;
+  height: 114rpx;
+  border-radius: 57rpx;
+  background: #ffae0b;
+  text-align: center;
+  line-height: 114rpx;
+  letter-spacing: 20rpx;
+  font-size: 45rpx;
+  color: #000000;
+  width: 100%;
+}
+
+/* 兑换的入口 */
+.conversion_type{
+    margin: 14rpx 0 0 0;
+}
+.type_item {
+  padding: 79rpx 0 23rpx 0;
+  border-bottom: 2rpx solid #7f7f7f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.type_item text{
+  font-size: 30rpx;
+  color: #333333;
+}
+.type_item image {
+  width: 14rpx;
+  height: 24rpx;
+}
+
+.conversion_con_top {
+  display: flex;
+  justify-content: space-between;
+  margin: 105rpx 0 48rpx 0;
+  font-size: 30rpx;
+  color: #000000;
+}
+
+.hind {
+  text-align: center;
+  font-size: 30rpx;
+  color: #a3a3a3;
+}
+.btn_con {
+  margin:208rpx 0 0 0; 
+}
+.btn_con button {
+  font-size: 45rpx;
+  color: #000000;
+  letter-spacing: 30rpx;
+  height: 114rpx;
+  border-radius: 57rpx;
+  background: #ffae0b;
+  border: none;
+}
+
+/* 后悔药的列表 */
+.list_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0; 
+  border-bottom: 2rpx solid #7f7f7f
+}
+.list_item image {
+    width: 100rpx;
+    height: 60rpx;
+}
+.list_item text {
+  font-size: 30rpx;
+  color: #000000;
+
+}

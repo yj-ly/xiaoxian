@@ -1,0 +1,32 @@
+.main {
+  margin: 0 63rpx;
+}
+
+.list_item {
+  display: flex;
+  border-bottom: 1px solid #f7f7f7;
+  font-size: 30rpx;
+  color: #000;
+  height: 98rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+/* .time {
+  margin: 0 60rpx 0 0;
+} */
+
+.login_time {
+  margin: 0 10rpx;
+} 
+
+
+/* 没有数据的时候  */
+.not_list {
+  text-align: center;
+  margin: 200rpx 0 0 0;
+  font-size: 30rpx;
+  color: #000000;
+}
+.not_list view{
+  margin: 10rpx 0 0 0;
+}

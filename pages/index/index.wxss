@@ -1,0 +1,36 @@
+.login-logo {
+  width: 146rpx;
+  height: 146rpx;
+  margin: 160rpx auto 65rpx;
+}
+
+.login-logo > image {
+  width: 146rpx;
+  height: 146rpx;
+}
+
+.login-tit {
+  font-size: 42rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.login-tip {
+  font-size: 30rpx;
+  line-height: 46rpx;
+  color: #444;
+  padding: 103rpx 23rpx 80rpx;
+  box-sizing: border-box;  
+  /* letter-spacing: 1rpx; */
+}
+
+.login-btn {
+  width: 654rpx;
+  height: 88rpx;
+  background-color: #ff743e;
+  border-radius: 10rpx;
+  border: none;
+  outline: none;
+  font-size: 36rpx;
+  color: #fff;
+}

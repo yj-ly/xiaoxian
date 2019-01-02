@@ -1,0 +1,9 @@
+<view class='content'>
+  <view>discover</view>
+
+
+  <import src="../compontent/footertab/footertab.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+</view>
+
+
