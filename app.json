@@ -1,18 +1,21 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/integral/integral",
     "pages/clockin/clockin",
     "pages/my/my",
     "pages/regret/regret",
-    "pages/discover/discover", 
+    "pages/discover/discover",
     "pages/changeUserMsg/changeUserMsg",
-    "pages/discount/discount"
+    "pages/discount/discount",
+    "pages/clockinplaza/clockinplaza",
+    "pages/studyplaza/studyplaza",
+    "pages/clockindetail/clockindetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "快来小鲜",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }
