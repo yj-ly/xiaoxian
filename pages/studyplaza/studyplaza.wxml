@@ -17,7 +17,8 @@
             <view class='item_user'></view>
             <view class='item_user'></view>
           </view>
-          <navigator url='/pages/coursedetail/coursedetail' class='go_clockin'>加入学习</navigator>
+          {{item.courseId}}
+          <navigator url='/pages/coursedetail/coursedetail?courseId={{item.id}}' class='go_clockin'>加入学习</navigator>
         </view>
       </view>
     </view>

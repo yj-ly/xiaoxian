@@ -5,9 +5,9 @@
       <image src='/pages/imgs/study1.png' class='study_img'></image>
       <view class='clockin_top_tit'>
         <view class='clockin_left'>
-          <view class='clockin_name'>打卡营名称3</view>
-          <view class='start_time'>开始时间：2018年12月24日</view>
-          <view class='num'>已参与人数 999</view>
+          <view class='clockin_name'>{{detailMsg.title}}</view>
+          <view class='start_time'>开始时间：{{detailMsg.starTime}}</view>
+          <view class='num'>已参与人数 {{detailMsg.partake}}</view>
         </view>
 
         <view class='clockin_top_right'>
@@ -32,7 +32,7 @@
     <!--课程的学习图片结束-->
 
     <!-- 打卡 -->
-    <view class='clockin_btn'>
+    <view class='clockin_btn' wx:if="{{isBuy == 0}}">
       <navigator url='' class='go_btn'>打卡</navigator>
     </view>
 
@@ -50,7 +50,7 @@
 
     <!-- 课程简介 -->
     <view class='sourse_dis' wx:if="{{indexClass == 0}}">
-      <audio>
+      <audio wx:if="{{detailMsg.isBuy != 0}}">
         <view class='audio_con'>
           <view class='audio_left'>
             <image src='/pages/imgs/voice_det.png'></image>
@@ -61,10 +61,28 @@
 
       </audio>
 
-      <view class='sourse_txt'>
+      <!-- 没有购买的时候显示购买的按钮  -->
+      <view class='not_buy_con' wx:if="{{detailMsg.isBuy == 0}}">
+
+        <audio>
+          <view class='audio_con'>
+            <view class='audio_left'>
+              <image src='/pages/imgs/voice_det.png'></image>
+              <text class='open_audio'>点击收听</text>
+            </view>
+            <view class='audion_time'>60s</view>
+          </view>
+
+        </audio>
+        <text class='noy_buy_tit'>购买之后查看全部内容</text>
+        <view class='buy_btn' bindtap='showPayModelChnage'>￥90立即购买</view>
+
+      </view>
+
+      <view class='sourse_txt' wx:if="{{detailMsg.isBuy != 0}}">
         <!-- 展示富文本 -->
         <view class='rich_txt_con'>
-          <view class='rich_txt'>
+          <!-- <view class='rich_txt'>
             今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的 今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的 今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的 今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的
           </view>
 
@@ -72,7 +90,10 @@
             <image src='/pages/imgs/study1.png'></image>
             <image src='/pages/imgs/study1.png'></image>
             <image src='/pages/imgs/study1.png'></image>
-          </view>
+          </view> -->
+
+          <import src="../../wxParse/wxParse.wxml" />
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
 
         </view>
       </view>
@@ -181,17 +202,17 @@
                   </view>
 
                 </audio>
-                 <view class='clockin_txt_d'>
-                人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用
+                <view class='clockin_txt_d'>
+                  人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用
+                </view>
+
+                <view class='clockin_bot'>
+                  <view class='clockin_name'>打卡的标题</view>
+                  <!-- <navigator url=''>加入打卡</navigator> -->
+                </view>
               </view>
 
-              <view class='clockin_bot'>
-                <view class='clockin_name'>打卡的标题</view>
-                <!-- <navigator url=''>加入打卡</navigator> -->
-              </view>
-              </view>
 
-             
             </view>
 
           </view>
@@ -226,37 +247,37 @@
 
         </view>
         <!-- 评论消息和点赞 -->
-          <view class='comment_con'>
-            <view class='like'>
-              <image></image>
-              <view class='like_txt'>Bright</view>
-              <text>,</text>
-              <view class='like_txt'>帅哥</view>
-            </view>
-
-
-            <view class='reply_item_con'>
-              <view class='reply_item'>
-                Brigth:
-                <text>太棒了</text>
-              </view>
-              <view class='reply_item'>
-                Brigth:
-                <audio>
-                  <image></image>
-                </audio>
-                <text>20</text>
-
-              </view>
-
-              <view class='reply_item'>
-                帅哥:
-                <text>回复</text> Brigth：
-                <text>谢谢</text>
-              </view>
-            </view>
-
+        <view class='comment_con'>
+          <view class='like'>
+            <image></image>
+            <view class='like_txt'>Bright</view>
+            <text>,</text>
+            <view class='like_txt'>帅哥</view>
           </view>
+
+
+          <view class='reply_item_con'>
+            <view class='reply_item'>
+              Brigth:
+              <text>太棒了</text>
+            </view>
+            <view class='reply_item'>
+              Brigth:
+              <audio>
+                <image></image>
+              </audio>
+              <text>20</text>
+
+            </view>
+
+            <view class='reply_item'>
+              帅哥:
+              <text>回复</text> Brigth：
+              <text>谢谢</text>
+            </view>
+          </view>
+
+        </view>
 
       </view>
 
@@ -299,76 +320,94 @@
   </view>
 
   <!-- 支付弹框 -->
-    <view class='pay_con'>
-        <view class='pay_model'></view>
-        <view class='pay_msg_con'>
-            <view class='commodity_con'>
-                <view class='commodity_con_left'>
-                    <image src=''></image>
-                </view>
-                 <view class='commodity_con_right'>
-                    <view class='commodity_tit'>
-                        hello world 我在人民广场吃着炸鸡 我在人民广场吃着炸鸡 我在人民广场吃着炸鸡
-                    </view>
-                    <view class='commodity_money'>￥ 90.00</view>
-                </view>
-                
-            </view>
-
-
-          <!-- 优惠券选择 -->
-          <view class='discounts_list_con'>
-              <view class='discounts_txt'>优惠券选择</view>
-              <view class='discounts_change'>
-                  0张可用 <image src=''></image>
-              </view>
-          </view>
-
-          <!-- 计算要支付的价格 -->
-          <view class='pay_item_con'>
-            <view class='pay_item'>
-                <text>产品金额</text>
-                <view class='pay_item_money'>￥ 90.00</view>
-            </view>
-            <view class='pay_item'>
-                <text>优惠抵扣</text>
-                <view class='pay_item_money'>-￥ 0.00</view>
-            </view>
-            <view class='pay_item'>
-                <text>实付金额</text>
-                <view class='pay_item_money'>￥ 90.00</view>
-            </view>
-          </view>
-
-          <!-- 支付btn -->
-          <view class='pay_btn'>
-              <button>去付款</button>
-          </view>
+  <view class='pay_con' wx:if="{{showPayModel}}">
+    <!-- <view class='pay_model'></view> -->
+    <view class='pay_msg_con'>
+      <view class='commodity_con'>
+        <view class='commodity_con_left'>
+          <image src='{{detailMsg.picture}}'></image>
         </view>
+        <view class='commodity_con_right'>
+          <view class='commodity_tit'>
+            {{detailMsg.title}}
+          </view>
+          <view class='commodity_money'>￥ {{detailMsg.money}}</view>
+        </view>
+
+      </view>
+
+
+      <!-- 优惠券选择 -->
+      <view class='discounts_list_con' bindtap='showDiscountChange'>
+        <view class='discounts_txt'>优惠券选择</view>
+        <view class='discounts_change'>
+          {{list.length}}张可用
+          <image src='/pages/imgs/more.png'></image>
+        </view>
+      </view>
+
+      <!-- 计算要支付的价格 -->
+      <view class='pay_item_con'>
+        <view class='pay_item'>
+          <text>产品金额</text>
+          <view class='pay_item_money'>￥ {{detailMsg.money}}</view>
+        </view>
+        <view class='pay_item'>
+          <text>优惠抵扣</text>
+          <view class='pay_item_money'>-￥ {{deductionMoney}}</view>
+        </view>
+        <view class='pay_item'>
+          <text>实付金额</text>
+          <view class='pay_item_money'>￥ {{payModel.money}}</view>
+        </view>
+      </view>
+
+      <!-- 支付btn -->
+      <view class='pay_btn'>
+        <button>去付款</button>
+      </view>
     </view>
+  </view>
   <!-- 支付弹框结束 -->
 
   <!-- 选择优惠券的弹框 -->
-    <view class='discounts_con'>
-        <view class='discounts_tit'>优惠券</view>
-        <view class='discounts_list'>
-            <view class='discounts_list_left'>
-              <image></image>
-              <view class='discounts_list_msg'>
-                  <text>消费低用券</text>
-                  <video>20元</video>
-              </view>
+  <view class='discounts_con' wx:if="{{showDiscountModel}}">
+    <view class='discounts_model'></view>
+
+    <view class='discounts_wrap'>
+      <view class='discounts_tit'>优惠券</view>
+
+      <view class='discounts_list_con_b'>
+        <view class='discounts_list' data-index='{{index}}' wx:for="{{list}}" wx:key="{{index}}" data-moey='{{item.money}}' bindtap='setDiscount'>
+          <view class='discounts_list_left'>
+            <image src='/pages/imgs/my_discounts.png'></image>
+            <view class='discounts_list_msg'>
+              <text>{{item.desc}}</text>
+              <view>{{item.money}}元</view>
             </view>
-            <view class='discounts_list_right'>
-                <image></image>
-            </view>
+          </view>
+          <view class='discounts_list_right'>
+            {{item.selectBoole}}
+            <image src='/pages/imgs/unselected_discounts.png' wx:if="{{item.selectBoole == false}}"></image>
+            <image src='/pages/imgs/discounts_select.png' wx:else></image>
+          </view>
         </view>
 
-        <!-- 确认选中消费券的按钮 -->
-        <view class='suer_con'>
-            <button>确定</button>
+        <view class='not_discount' wx:if="{{list.length == 0}}">
+            暂时还没有优惠券
         </view>
+
+      </view>
+
+
+      <!-- 确认选中消费券的按钮 -->
+      <view class='suer_con'>
+        <button>确定</button>
+      </view>
     </view>
+
+
+  </view>
   <!-- 选择优惠券的弹框结束 -->
 
 

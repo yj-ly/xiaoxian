@@ -1,3 +1,5 @@
+@import "/wxParse/wxParse.wxss";
+
 .clockin_top {
   position: relative;
   height: 527rpx;
@@ -32,7 +34,7 @@
   color: rgb(0, 0, 0);
 }
 
-.clockin_top_right .share,.dynamic_top .share {
+.clockin_top_right .share, .dynamic_top .share {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -41,7 +43,7 @@
   margin: 40rpx 0 8rpx 0;
 }
 
-.clockin_top_right button[plain],.dynamic_top  button[plain] {
+.clockin_top_right button[plain], .dynamic_top  button[plain] {
   border: none;
   margin: 0;
   font-size: 26rpx;
@@ -51,20 +53,22 @@
   align-items: center;
 }
 
-.clockin_top_right  .share  image,.dynamic_top .share  image {
+.clockin_top_right  .share  image, .dynamic_top .share  image {
   width: 40rpx;
   height: 40rpx;
   margin: 0 0 0 10rpx;
 }
-.clockin_top_right .clockin_left  {
+
+.clockin_top_right .clockin_left {
   display: flex;
   margin: 50rpx 0 0 0;
 }
+
 .clockin_top_right .clockin_left view {
   width: 45rpx;
   height: 45rpx;
   border-radius: 50%;
-  border:2rpx solid #ffffff;
+  border: 2rpx solid #fff;
   background: #7f7f7f;
   margin: 0 0 0 -17rpx;
 }
@@ -85,7 +89,7 @@
   border-bottom: 4rpx solid #ffae0b;
 }
 
-.sourse_dis .audio_con,.voice .audio_con {
+.sourse_dis .audio_con, .voice .audio_con, .not_buy_con .audio_con {
   display: flex;
   border: 1rpx solid #ffae0b;
   margin: 20rpx 118rpx;
@@ -96,24 +100,61 @@
   justify-content: space-between;
 }
 
-.sourse_dis .audio_left,.voice .audio_left {
+.sourse_dis .audio_left, .voice .audio_left, .not_buy_con .audio_left {
   display: flex;
   align-items: center;
 }
 
-.sourse_dis .audion_time,.voice .audion_time {
+.sourse_dis .audion_time, .voice .audion_time, .not_buy_con .audion_time {
   font-size: 22rpx;
   color: #7f7f7f;
   padding: 0 36rpx 0 0;
 }
 
-.sourse_dis audio image,.voice  audio image  {
+.sourse_dis {
+  position: relative;
+}
+
+/*没有购买该课程的时候展示  */
+
+.not_buy_con {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.not_buy_con .noy_buy_tit {
+  font-size: 36rpx;
+  color: #000;
+}
+
+.not_buy_con .buy_btn {
+  margin: 28rpx 0 0 0;
+  background: #ffae0b;
+  border-radius: 49rpx;
+  text-align: center;
+  height: 99rpx;
+  color: #000;
+  line-height: 99rpx;
+  font-weight: 600;
+  font-size: 36rpx;
+  width: 446rpx;
+}
+
+.sourse_dis audio image, .voice  audio image, .not_buy_con audio image {
   width: 40rpx;
   height: 40rpx;
   margin: 0 30rpx 0 22rpx;
 }
 
-.sourse_dis audio text,.voice  audio text  {
+.sourse_dis audio text, .voice  audio text, .not_buy_con audio text {
   font-size: 22rpx;
   color: #7f7f7f;
 }
@@ -123,7 +164,7 @@
 .clockin_btn {
   padding: 50rpx 0;
   border-bottom: 20rpx solid #f3f3f3;
-  background: #ffffff;
+  background: #fff;
 }
 
 .clockin_btn .go_btn {
@@ -133,87 +174,99 @@
   text-align: center;
   font-size: 36rpx;
   letter-spacing: 40rpx;
-  color: #000000;
+  color: #000;
   background: #ffae0b;
   border-radius: 49rpx;
   font-weight: 600;
 }
 
 /* 课程简介的介绍 */
+
 .rich_txt_con {
-    padding:  0 54rpx;
-    margin: 47rpx 0 0 0;
+  padding: 0 54rpx;
+  margin: 47rpx 0 0 0;
 }
+
 .rich_txt {
   font-size: 25rpx;
   color: #7f7f7f;
   line-height: 38rpx;
   margin-bottom: 33rpx;
 }
+
 .rich_txt_con image {
   width: 100%;
   margin-bottom: 35rpx;
 }
 
 /* 打卡的相关课程 */
+
 .study_item {
   position: relative;
   margin-bottom: 150rpx;
-  
 }
 
-.study_con .last_item{
+.study_con .last_item {
   margin: 0 0 120rpx 0;
 }
+
 .study_item image {
   width: 100%;
   height: 368rpx;
 }
-.correlation_sourse_item{
+
+.correlation_sourse_item {
   border-bottom: 1px solid #f3f3f3;
   padding: 0 60rpx 0 60rpx;
   margin: 0 0 30rpx 0;
 }
 
 .correlation_sourse_item .study_time {
-    padding: 0 0 41rpx 0;
-    color: #ffae0b;
-    font-size: 26rpx;
+  padding: 0 0 41rpx 0;
+  color: #ffae0b;
+  font-size: 26rpx;
 }
+
 .course_bot {
   display: flex;
-   padding: 0 0 41rpx 0;
-   justify-content: space-between;
-   background: #ffffff;
-   
+  padding: 0 0 41rpx 0;
+  justify-content: space-between;
+  background: #fff;
 }
+
 .course_left {
   flex: 1.5;
 }
+
 .course_left image {
   width: 233rpx;
   height: 116rpx;
   margin: 0 0 13rpx 0;
 }
+
 .course_left view {
   font-size: 25rpx;
   color: #a3a3a3;
 }
+
 .course_right {
   flex: 2;
 }
+
 .course_right .book_name {
   font-size: 25rpx;
-  color: #000000;
+  color: #000;
   line-height: 30rpx;
 }
+
 .load_more {
   text-align: center;
   color: #b2b2b2;
   font-size: 30rpx;
   padding: 0 0 20rpx 0;
 }
-.load_more text{
+
+.load_more text {
   border-bottom: 1px solid #b2b2b2;
   padding-bottom: 6rpx;
 }
@@ -224,121 +277,143 @@
   margin: 0 60rpx;
   padding: 30rpx 0;
 }
-.participation_item_con view{
+
+.participation_item_con view {
   width: 45rpx;
   height: 45rpx;
   border-radius: 50%;
-  border:2rpx solid #ffffff;
+  border: 2rpx solid #fff;
   background: #7f7f7f;
   margin: 0 3rpx 6rpx 0;
 }
 
 /* 打卡动态 */
+
 .clockin_list_con {
   margin: 0 60rpx;
 }
+
 .dynamic_top {
   display: flex;
   justify-content: space-between;
 }
+
 .dynamic_top_left {
   display: flex;
   align-items: center;
 }
-.dynamic_top_left image{
+
+.dynamic_top_left image {
   width: 60rpx;
   height: 60rpx;
 }
+
 .dynamic_top_left .user_name {
   font-size: 36rpx;
-  color: rgb(225, 174,11);
+  color: rgb(225, 174, 11);
   margin: 0 20rpx;
-
 }
-.dynamic_top_left text{
+
+.dynamic_top_left text {
   font-size: 26rpx;
   color: rgb(138, 138, 138);
 }
+
 .clockin_status_top {
   display: flex;
   justify-content: space-between;
   margin: 40rpx 0 0 0;
 }
+
 .clockin_status_top .clockin_status {
-  border:1px solid #ffae0b;
+  border: 1px solid #ffae0b;
   font-size: 30rpx;
   color: #ffae0b;
   border-radius: 20rpx;
   padding: 4rpx 14rpx;
   margin: 0 0 0 60rpx;
 }
-.clockin_status_top text{
+
+.clockin_status_top text {
   font-size: 30rpx;
-  color: rgba(0, 0,0,.8)
+  color: rgba(0, 0, 0, 0.8);
 }
+
 .clockin_txt_det {
-    background: rgb(255, 239, 206);
-    margin: 24rpx 0 0 60rpx;
-    padding: 0 0 32rpx 0;
-    border-radius: 30rpx;
+  background: rgb(255, 239, 206);
+  margin: 24rpx 0 0 60rpx;
+  padding: 0 0 32rpx 0;
+  border-radius: 30rpx;
 }
+
 .voice .audio_con {
   margin: 24px 30rpx;
 }
+
 .clockin_txt_d {
   font-size: 30rpx;
-  color: rgba(0, 0,0,.8);
+  color: rgba(0, 0, 0, 0.8);
   padding: 0 70rpx;
 }
+
 .clockin_bot {
   margin: 48rpx 0 0 70rpx;
 }
-.clockin_bot .clockin_name{
+
+.clockin_bot .clockin_name {
   font-size: 22rpx;
-  color: rgba(0, 0,0,0.5)
+  color: rgba(0, 0, 0, 0.5);
 }
+
 .clockin_msg {
   display: flex;
   justify-content: space-between;
   margin: 32rpx 0 16rpx 60rpx;
   /* align-items: center; */
 }
+
 .clockin_msg_left {
   display: flex;
-  font-size:22rpx;
-  color: rgba(0,0,0,.5);
+  font-size: 22rpx;
+  color: rgba(0, 0, 0, 0.5);
   justify-content: space-between;
 }
-.clockin_msg_left view{
+
+.clockin_msg_left view {
   padding: 0 30rpx;
 }
+
 .reply_msg image {
   width: 60rpx;
   height: 40rpx;
 }
+
 .reply_msg {
   position: relative;
 }
+
 .reply_msg .reply_item {
   position: absolute;
   right: 60rpx;
   top: 40rpx;
-  background: #000000;
+  background: #000;
   width: 266rpx;
   height: 56rpx;
   display: flex;
   align-items: center;
 }
+
 .reply_msg  .reply_item view {
   flex: 1;
   font-size: 32rpx;
-  color: #ffffff;
+  color: #fff;
   justify-content: center;
   display: flex;
   position: relative;
   height: 100%;
   align-items: center;
 }
+
 .reply_msg  .reply_item view:nth-child(1)::after {
   content: '';
   width: 1rpx;
@@ -346,25 +421,28 @@
   top: 10rpx;
   position: absolute;
   right: -10rpx;
-  background: #ffffff;
+  background: #fff;
 }
 
 /* 评论的消息 */
+
 .comment_con {
- margin: 0 0 0 60rpx;
+  margin: 0 0 0 60rpx;
   background: #f0f0f0;
   border-radius: 30rpx;
   padding: 0 0 24rpx 15rpx;
 }
+
 .like {
   display: flex;
   padding: 17rpx 0 0 0;
 }
+
 .like image {
   width: 40rpx;
   height: 40rpx;
-
 }
+
 .like view {
   color: #ffae0b;
 }
@@ -372,6 +450,7 @@
 .reply_item_con {
   margin: 24rpx 0 0 0;
 }
+
 .reply_item_con .reply_item {
   color: #ffae0b;
   font-size: 26rpx;
@@ -379,10 +458,12 @@
   margin-bottom: 24rpx;
   align-items: center;
 }
-.reply_item_con .reply_item text{
+
+.reply_item_con .reply_item text {
   color: rgb(49, 49, 49);
 }
-.reply_item_con .reply_item audio{
+
+.reply_item_con .reply_item audio {
   width: 300rpx;
   height: 30rpx;
   border-radius: 20rpx;
@@ -392,8 +473,185 @@
   align-items: center;
   margin: 0 14rpx 0 0;
 }
-.reply_item_con .reply_item audio image {
-    width: 20rpx;
-    height: 20rpx;
 
+.reply_item_con .reply_item audio image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+/*支付的弹框 */
+
+.pay_model,.discounts_model {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+  z-index: 100;
+}
+
+.pay_msg_con {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+}
+
+.commodity_con {
+  margin: 0 48rpx;
+  padding: 48rpx 0 36rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.commodity_con_left image {
+  width: 233rpx;
+  height: 116rpx;
+  margin: 0 39rpx 0 0;
+}
+
+.commodity_con_right .commodity_txt {
+  font-size: 25rpx;
+  color: #000;
+  line-height: 40rpx;
+  margin-bottom: 29rpx;
+}
+
+.commodity_con_right .commodity_money {
+  color: #ffae0b;
+  font-size: 36rpx;
+}
+
+.discounts_list_con {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 48rpx;
+  padding: 48rpx 13rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.discounts_txt {
+  font-size: 30rpx;
+  color: #585858;
+}
+
+.discounts_change {
+  font-size: 25rpx;
+  color: #a3a3a3;
+}
+
+.discounts_change image {
+  margin: 0 0 0 25rpx;
+  width: 14rpx;
+  height: 24rpx;
+}
+
+.pay_item_con {
+  margin: 48rpx 63rpx 0 63rpx;
+}
+
+.pay_item {
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay_item text {
+  font-size: 30rpx;
+  color: #585858;
+}
+
+.pay_item view {
+  font-size: 30rpx;
+  color: #ffae0b;
+}
+
+.pay_btn button,.suer_con button {
+  margin: 120rpx 71rpx 0 71rpx;
+  background: #ffae0b;
+  border-radius: 57rpx;
+  text-align: center;
+  font-size: 45rpx;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 10rpx;
+  height: 114rpx;
+  line-height: 114rpx;
+}
+
+.discounts_wrap {
+  position: fixed;
+  width: 100%;
+  background: #ffffff;
+  height: 800rpx;
+  z-index: 400;
+  bottom: 0;
+  padding: 0 0 46rpx 0;
+}
+.discounts_tit {
+  text-align: center;
+  font-size: 32rpx;
+  color: #000000;
+  padding: 35rpx 0 32rpx 0;
+}
+.discounts_list_con_b {
+  height: 500rpx;
+  overflow: auto;
+}
+.discounts_list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 48rpx;
+  padding: 0 4rpx;
+  border-bottom: 1px solid #f0f0f0;
+  height: 180rpx;
+  align-items: center;
+}
+.discounts_list_left {
+  display: flex;
+}
+
+.discounts_list_left image{
+  width: 233rpx;
+  height: 116rpx;
+  margin: 0 52rpx 0 0;
+}
+.discounts_list_msg text {
+    font-size: 25rpx;
+    color: #000000;
+    margin-bottom: 14rpx;
+}
+.discounts_list_msg view{
+  font-size: 48rpx;
+  color: #000000;
+  font-weight: 600;
+
+}
+.discounts_list_right image {
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.suer_con {
+  padding: 23px 136rpx;
+  border-top: 1rpx solid #f0f0f0;
+  margin: 32rpx 0 0 0;
+}
+.suer_con button  {
+  margin: 0;
+}
+.discounts_con .discounts_model {
+  z-index: 300;
+}
+.not_discount {
+  text-align: center;
+  font-size: 30rpx;
+  color: #000000;
+  margin: 100rpx 0 0 0;
 }

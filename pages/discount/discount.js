@@ -74,9 +74,11 @@ Page({
         icon: 'success',
         duration: 2000
       })
-      app.postAjax('v1/user/coupon/list', {}, this.getUserList);   //成功之后在重新的获取一次优惠券接口
+      this.setData({   //兑换成功后把code在清除掉
+        code:''
+      })
+      app.getAjax('v1/user/coupon/list', {}, this.getUserList);   //成功之后在重新的获取一次优惠券接口
     }else{
-      console.log(res.data);
       wx.showToast({
         title: res.data.message,
         icon: 'none',
@@ -102,7 +104,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('触发');
+ 
     app.getAjax('v1/user/coupon/list', {}, this.getUserList);
   },
 
