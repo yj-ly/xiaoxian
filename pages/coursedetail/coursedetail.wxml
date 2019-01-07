@@ -298,4 +298,80 @@
 
   </view>
 
+  <!-- 支付弹框 -->
+    <view class='pay_con'>
+        <view class='pay_model'></view>
+        <view class='pay_msg_con'>
+            <view class='commodity_con'>
+                <view class='commodity_con_left'>
+                    <image src=''></image>
+                </view>
+                 <view class='commodity_con_right'>
+                    <view class='commodity_tit'>
+                        hello world 我在人民广场吃着炸鸡 我在人民广场吃着炸鸡 我在人民广场吃着炸鸡
+                    </view>
+                    <view class='commodity_money'>￥ 90.00</view>
+                </view>
+                
+            </view>
+
+
+          <!-- 优惠券选择 -->
+          <view class='discounts_list_con'>
+              <view class='discounts_txt'>优惠券选择</view>
+              <view class='discounts_change'>
+                  0张可用 <image src=''></image>
+              </view>
+          </view>
+
+          <!-- 计算要支付的价格 -->
+          <view class='pay_item_con'>
+            <view class='pay_item'>
+                <text>产品金额</text>
+                <view class='pay_item_money'>￥ 90.00</view>
+            </view>
+            <view class='pay_item'>
+                <text>优惠抵扣</text>
+                <view class='pay_item_money'>-￥ 0.00</view>
+            </view>
+            <view class='pay_item'>
+                <text>实付金额</text>
+                <view class='pay_item_money'>￥ 90.00</view>
+            </view>
+          </view>
+
+          <!-- 支付btn -->
+          <view class='pay_btn'>
+              <button>去付款</button>
+          </view>
+        </view>
+    </view>
+  <!-- 支付弹框结束 -->
+
+  <!-- 选择优惠券的弹框 -->
+    <view class='discounts_con'>
+        <view class='discounts_tit'>优惠券</view>
+        <view class='discounts_list'>
+            <view class='discounts_list_left'>
+              <image></image>
+              <view class='discounts_list_msg'>
+                  <text>消费低用券</text>
+                  <video>20元</video>
+              </view>
+            </view>
+            <view class='discounts_list_right'>
+                <image></image>
+            </view>
+        </view>
+
+        <!-- 确认选中消费券的按钮 -->
+        <view class='suer_con'>
+            <button>确定</button>
+        </view>
+    </view>
+  <!-- 选择优惠券的弹框结束 -->
+
+
+
+
 </view>
