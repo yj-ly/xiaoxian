@@ -1,0 +1,301 @@
+<view class='soursedetail'>
+  <view class='main'>
+    <!-- 课程的学习图片 -->
+    <view class='clockin_top'>
+      <image src='/pages/imgs/study1.png' class='study_img'></image>
+      <view class='clockin_top_tit'>
+        <view class='clockin_left'>
+          <view class='clockin_name'>打卡营名称3</view>
+          <view class='start_time'>开始时间：2018年12月24日</view>
+          <view class='num'>已参与人数 999</view>
+        </view>
+
+        <view class='clockin_top_right'>
+          <view class='share'>
+            <button open-type="share" size='40rpx' plain="true">分享
+              <image src='/pages/imgs/share.png'></image>
+            </button>
+          </view>
+
+          <view class='clockin_left'>
+            <view class='item_user'></view>
+            <view class='item_user'></view>
+            <view class='item_user'></view>
+            <view class='item_user'></view>
+            <view class='item_user'></view>
+          </view>
+
+
+        </view>
+      </view>
+    </view>
+    <!--课程的学习图片结束-->
+
+    <!-- 打卡 -->
+    <view class='clockin_btn'>
+      <navigator url='' class='go_btn'>打卡</navigator>
+    </view>
+
+    <!-- 打卡结束  -->
+
+
+
+    <!-- 切换的Tab -->
+    <view class='change_tab_con'>
+      <view class="tab_item {{indexClass == 0 ? 'change_tab' : ''}}" data-type='0' bindtap='changeTab'>简介</view>
+      <view class="tab_item {{indexClass == 1 ? 'change_tab' : ''}}" data-type='1' bindtap='changeTab'>打卡课程</view>
+      <view class="tab_item {{indexClass == 2 ? 'change_tab' : ''}}" data-type='2' bindtap='changeTab'>打卡动态</view>
+      <view class="tab_item {{indexClass == 3 ? 'change_tab' : ''}}" data-type='3' bindtap='changeTab'>参与人数</view>
+    </view>
+
+    <!-- 课程简介 -->
+    <view class='sourse_dis' wx:if="{{indexClass == 0}}">
+      <audio>
+        <view class='audio_con'>
+          <view class='audio_left'>
+            <image src='/pages/imgs/voice_det.png'></image>
+            <text class='open_audio'>点击收听</text>
+          </view>
+          <view class='audion_time'>60s</view>
+        </view>
+
+      </audio>
+
+      <view class='sourse_txt'>
+        <!-- 展示富文本 -->
+        <view class='rich_txt_con'>
+          <view class='rich_txt'>
+            今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的 今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的 今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的 今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的今天给大家讲一个我从球妈学习瑜伽的经验中,得到的唯一的
+          </view>
+
+          <view class='rich_img_con'>
+            <image src='/pages/imgs/study1.png'></image>
+            <image src='/pages/imgs/study1.png'></image>
+            <image src='/pages/imgs/study1.png'></image>
+          </view>
+
+        </view>
+      </view>
+    </view>
+    <!-- 课程简介结束 -->
+
+    <!-- 打卡的课程 -->
+    <view class='correlation_sourse' wx:if="{{indexClass == 1}}">
+      <view class='correlation_sourse_item'>
+
+        <view class='study_time'>2018年12月15日 | 第4天 | 共90天</view>
+        <view class='course_bot'>
+          <view class='course_left'>
+            <image src='/pages/imgs/study3.png'></image>
+            <view>999人参与 | 999人学习</view>
+          </view>
+          <view class='course_right'>
+            <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+          </view>
+
+        </view>
+      </view>
+      <view class='correlation_sourse_item'>
+
+        <view class='study_time'>2018年12月15日 | 第4天 | 共90天</view>
+        <view class='course_bot'>
+          <view class='course_left'>
+            <image src='/pages/imgs/study3.png'></image>
+            <view>999人参与 | 999人学习</view>
+          </view>
+          <view class='course_right'>
+            <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+          </view>
+
+        </view>
+      </view>
+      <view class='correlation_sourse_item'>
+
+        <view class='study_time'>2018年12月15日 | 第4天 | 共90天</view>
+        <view class='course_bot'>
+          <view class='course_left'>
+            <image src='/pages/imgs/study3.png'></image>
+            <view>999人参与 | 999人学习</view>
+          </view>
+          <view class='course_right'>
+            <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+          </view>
+
+        </view>
+      </view>
+      <view class='correlation_sourse_item'>
+
+        <view class='study_time'>2018年12月15日 | 第4天 | 共90天</view>
+        <view class='course_bot'>
+          <view class='course_left'>
+            <image src='/pages/imgs/study3.png'></image>
+            <view>999人参与 | 999人学习</view>
+          </view>
+          <view class='course_right'>
+            <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+          </view>
+
+        </view>
+      </view>
+
+
+      <view class='load_more'>
+        <text>加载更多</text>
+      </view>
+    </view>
+    <!-- 相关的课程结束 -->
+
+    <!-- 打卡动态 -->
+    <view class='clockin_list_con' wx:if="{{indexClass == 2}}">
+      <view class='dynamic_item'>
+        <view class='dynamic_top_con'>
+          <view class='dynamic_top'>
+            <view class='dynamic_top_left'>
+              <image src='/pages/imgs/voice_det.png'></image>
+              <view class='user_name'>hello world</view>
+              <text>v1</text>
+            </view>
+
+            <view class='share'>
+              <button open-type="share" size='40rpx' plain="true">分享
+                <image src='/pages/imgs/share.png'></image>
+              </button>
+            </view>
+          </view>
+
+          <view class='clockin_txt'>
+            <view class='clockin_status_top'>
+              <view class='clockin_status'>感悟</view>
+              <text>人生如梦梦里不分西东里不分西东</text>
+            </view>
+
+            <view class='clockin_txt_det'>
+              <view class='voice'>
+                <audio>
+                  <view class='audio_con'>
+                    <view class='audio_left'>
+                      <image src='/pages/imgs/voice_det.png'></image>
+                      <text class='open_audio'>点击收听</text>
+                    </view>
+                    <view class='audion_time'>60s</view>
+                  </view>
+
+                </audio>
+                 <view class='clockin_txt_d'>
+                人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用
+              </view>
+
+              <view class='clockin_bot'>
+                <view class='clockin_name'>打卡的标题</view>
+                <!-- <navigator url=''>加入打卡</navigator> -->
+              </view>
+              </view>
+
+             
+            </view>
+
+          </view>
+        </view>
+
+        <!-- 打卡过去的时间和 打的次数 打卡的地点 -->
+        <view class='clockin_msg'>
+
+          <view class='clockin_msg_left'>
+            <view class='clockin_time_after'>1分钟前</view>
+            <view class='clockin_num'>第1次打卡</view>
+            <view class='location_href'>上海</view>
+          </view>
+
+
+          <view class='reply_msg'>
+            <image class='reply_img' src='/pages/imgs/comment_ico.png'></image>
+
+            <!-- 点击消息展示出来 -->
+            <view class='reply_item' wx:if="{{false}}">
+              <view>
+                <image></image>
+                <view>点赞</view>
+              </view>
+
+              <view>
+                <image></image>
+                <view>评论</view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+        <!-- 评论消息和点赞 -->
+          <view class='comment_con'>
+            <view class='like'>
+              <image></image>
+              <view class='like_txt'>Bright</view>
+              <text>,</text>
+              <view class='like_txt'>帅哥</view>
+            </view>
+
+
+            <view class='reply_item_con'>
+              <view class='reply_item'>
+                Brigth:
+                <text>太棒了</text>
+              </view>
+              <view class='reply_item'>
+                Brigth:
+                <audio>
+                  <image></image>
+                </audio>
+                <text>20</text>
+
+              </view>
+
+              <view class='reply_item'>
+                帅哥:
+                <text>回复</text> Brigth：
+                <text>谢谢</text>
+              </view>
+            </view>
+
+          </view>
+
+      </view>
+
+    </view>
+    <!-- 打卡动态结束 -->
+
+    <!-- 参与的人数 -->
+    <view class='participation' wx:if="{{indexClass == 3}}">
+      <view class='participation_item_con'>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+        <view class='participation_item'></view>
+      </view>
+
+
+      <view class='load_more'>
+        <text>加载更多</text>
+      </view>
+    </view>
+    <!-- 参与的人数结束 -->
+
+  </view>
+
+</view>

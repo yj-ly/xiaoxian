@@ -1,12 +1,12 @@
 <view class="clockin_list_con">
 
   <view class='main'>
-    <view class='clickin_camp_item'>
+    <view class='clickin_camp_item' wx:for="{{list}}" wx:key="{{index}}" wx:if="{{list.length > 0}}">
       <image src='/pages/imgs/study1.png'></image>
       <view class='item_detail'>
-        <view class='item_detail_tit'>打卡营名称</view>
+        <view class='item_detail_tit'>{{item.title}}</view>
         <view class='clockin_camp_time'>
-          开始时间:2018.12.12
+          开始时间:{{item.starTime}}
         </view>
         <view class='participation'>
           已参与人数 999
@@ -24,98 +24,7 @@
         </view>
       </view>
     </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>打卡营名称</view>
-        <view class='clockin_camp_time'>
-          开始时间:2018.12.12
-        </view>
-        <view class='participation'>
-          已参与人数 999
-        </view>
 
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入打卡</navigator>
-        </view>
-      </view>
-    </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>打卡营名称</view>
-        <view class='clockin_camp_time'>
-          开始时间:2018.12.12
-        </view>
-        <view class='participation'>
-          已参与人数 999
-        </view>
-
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入打卡</navigator>
-        </view>
-      </view>
-    </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>打卡营名称</view>
-        <view class='clockin_camp_time'>
-          开始时间:2018.12.12
-        </view>
-        <view class='participation'>
-          已参与人数 999
-        </view>
-
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入打卡</navigator>
-        </view>
-      </view>
-    </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>打卡营名称</view>
-        <view class='clockin_camp_time'>
-          开始时间:2018.12.12
-        </view>
-        <view class='participation'>
-          已参与人数 999
-        </view>
-
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入打卡</navigator>
-        </view>
-      </view>
-    </view>
   </view>
 
 

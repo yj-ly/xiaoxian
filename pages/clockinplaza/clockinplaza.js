@@ -1,3 +1,4 @@
+const app = getApp();
 var template = require('../compontent/footertab/footertab.js');
 Page({
 
@@ -5,7 +6,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+      list:[],   //打卡营广场的列表
+      listModel:{
+        type:1,
+        page:1,
+        pageSize:15
+      }
   },
 
   /**
@@ -22,11 +28,25 @@ Page({
     
   },
 
+  // 获取打卡营广场的列表
+    getListCall(res){
+        if(res.data.code == 200){
+          this.setData({
+            list:res.data.result.data
+          })
+        }
+        console.log(this.data.list);
+        wx.hideLoading();
+    },
+
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    wx.showLoading({
+      title: '加载中...',
+    })
+    app.getAjax('v1/course/getList', this.data.listModel, this.getListCall);
   },
 
   /**

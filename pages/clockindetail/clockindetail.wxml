@@ -1,0 +1,315 @@
+<view class='clockindetail'>
+
+  <view class='main'>
+    <!-- 训练营的学习图片 -->
+    <view class='clockin_top'>
+      <image src='/pages/imgs/study1.png' class='study_img'></image>
+      <view class='clockin_top_tit'>
+        <view class='clockin_left'>
+          <view class='clockin_name'>打卡名称3</view>
+          <view class='start_time'>开始时间：2018.12.12</view>
+          <view class='num'>已参与人数 999</view>
+        </view>
+
+        <view class='clockin_top_right'>
+          <view class='share'>
+            <button open-type="share" size='40rpx' plain="true">分享 <image src='/pages/imgs/share.png'></image></button>
+           
+          </view>
+
+          <!-- 参与的人数 -->
+          <view class='participation'>
+               <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+                <view class='item_user'></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--训练营的学习图片结束-->
+
+    <!-- 购买和打卡 -->
+    <view class='pay_con'>
+
+      <!-- 支付的情况直接去打卡 -->
+      <navigator url='/pages/'>打卡</navigator>
+      <!-- 如果没有支付的话都必须要去支付 -->
+      <view class='pay_button'>
+        <text>入场券：90元</text>
+        <navigator url='/pages/pay/pay'>立即购买</navigator>
+      </view>
+    </view>
+    <!-- 购买和打卡结束 -->
+
+    <!-- 训练营的简介和排行榜 -->
+    <view class='description_con'>
+      <view>
+        <image></image>
+        训练营简介
+      </view>
+
+      <view>
+        <image></image>
+        排行榜
+      </view>
+    </view>
+    <!-- 训练营的简介和排行榜结束 -->
+
+    <!-- 切换不同的打卡课程和打卡动态和解锁课程 -->
+    <view class='change_tab_con'>
+      <view class='tab_con'>
+        <view>打卡课程</view>
+        <view>打卡动态</view>
+        <view>解锁课程</view>
+      </view>
+
+      <!--打卡的课程-->
+      <view class='clockin_course'>
+        <view class='list_item'>
+          <view class='time'>2018年12月15日|第4天|共90天</view>
+          <view class='course_bot'>
+            <view class='course_left'>
+              <image src='/pages/imgs/study3.png'></image>
+              <view>999人参与 | 999人学习</view>
+            </view>
+
+            <view class='course_right'>
+              <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+            </view>
+
+          </view>
+        </view>
+        <view class='list_item'>
+          <view class='time'>2018年12月15日|第4天|共90天</view>
+          <view class='course_bot'>
+            <view class='course_left'>
+              <image src='/pages/imgs/study3.png'></image>
+              <view>999人参与 | 999人学习</view>
+            </view>
+
+            <view class='course_right'>
+              <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+            </view>
+
+          </view>
+        </view>
+        <view class='list_item'>
+          <view class='time'>2018年12月15日|第4天|共90天</view>
+          <view class='course_bot'>
+            <view class='course_left'>
+              <image src='/pages/imgs/study3.png'></image>
+              <view>999人参与 | 999人学习</view>
+            </view>
+
+            <view class='course_right'>
+              <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+            </view>
+
+          </view>
+        </view>
+        <view class='list_item'>
+          <view class='time'>2018年12月15日|第4天|共90天</view>
+          <view class='course_bot'>
+            <view class='course_left'>
+              <image src='/pages/imgs/study3.png'></image>
+              <view>999人参与 | 999人学习</view>
+            </view>
+
+            <view class='course_right'>
+              <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+            </view>
+
+          </view>
+        </view>
+        <view class='list_item'>
+          <view class='time'>2018年12月15日|第4天|共90天</view>
+          <view class='course_bot'>
+            <view class='course_left'>
+              <image src='/pages/imgs/study3.png'></image>
+              <view>999人参与 | 999人学习</view>
+            </view>
+
+            <view class='course_right'>
+              <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+            </view>
+
+          </view>
+        </view>
+
+      </view>
+
+      <!-- 打卡的课程结束 -->
+
+      <!-- 打卡的动态 -->
+      <view class='dynamic'>
+        <view class='dynamic_item'>
+          <view class='dynamic_top_con'>
+            <view class='dynamic_top'>
+              <view>
+                <image></image>
+                <view class='user_name'>hello world</view>
+                <text>v1</text>
+              </view>
+
+              <view class='share_con'>
+                <button>分享</button>
+                <image></image>
+              </view>
+            </view>
+
+            <view class='clockin_txt'>
+              <view class='clockin_status_top'>
+                <view class='clockin_status'>感悟</view>
+                <text>人生如梦梦里不分西东,天造之才该有奇用</text>
+              </view>
+
+              <view class='clockin_txt_det'>
+                <view class='voice'>
+                  <audio>
+                    <image></image>
+                    <text>点击收听</text>
+                    <view class='audio_time'>60s</view>
+                  </audio>
+                </view>
+
+                <view class='clockin_txt_d'>
+                  人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用 人生如梦梦里不分西东,天造之才该有奇用
+                </view>
+
+                <view class='clockin_bot'>
+                  <view class='clockin_name'>打卡的标题</view>
+                  <navigator url=''>加入打卡</navigator>
+                </view>
+              </view>
+
+            </view>
+          </view>
+
+          <!-- 打卡过去的时间和 打的次数 打卡的地点 -->
+          <view class='clockin_msg'>
+
+            <view class='clockin_msg_left'>
+              <view class='clockin_time_after'>1分钟前</view>
+              <view class='clockin_num'>第1次打卡</view>
+              <view class='location_href'>上海</view>
+            </view>
+
+
+            <view class='reply_msg'>
+              <image class='reply_img'></image>
+
+              <!-- 点击消息展示出来 -->
+              <view class='reply_item'>
+                <view>
+                  <image></image>
+                  <view>点赞</view>
+                </view>
+
+                <view>
+                  <image></image>
+                  <view>评论</view>
+                </view>
+              </view>
+            </view>
+
+
+            <!-- 评论消息和点赞 -->
+            <view class='comment_con'>
+              <view class='like'>
+                <image></image>
+                <view class='like_txt'>Bright</view>
+                <text>,</text>
+                <view class='like_txt'>帅哥</view>
+              </view>
+
+
+              <view class='reply_item_con'>
+                <view class='reply_item'>
+                  Brigth:
+                  <text>太棒了</text>
+                </view>
+                <view class='reply_item'>
+                  Brigth:
+                  <audio>
+                    <image></image>
+                  </audio>
+                  <text>20</text>
+
+                </view>
+
+                <view class='reply_item'>
+                  帅哥:
+                  <text>回复</text> Brigth：
+                  <text>谢谢</text>
+                </view>
+              </view>
+
+            </view>
+
+          </view>
+
+        </view>
+
+      </view>
+      <!-- 打卡的动态结束 -->
+
+      <!-- 解锁课程 -->
+
+      <view class='unlock_con'>
+        <view class='unlock_item'>
+          <view class='course_bot'>
+            <view class='course_left'>
+              <image src='/pages/imgs/study3.png'></image>
+              <view>999人参与 | 999人学习</view>
+            </view>
+
+            <view class='course_right'>
+              <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+            </view>
+
+          <!-- 已经解锁的图片 -->
+          <view class='open_unlock_img'>
+              <image></image>
+          </view>
+
+          </view>
+
+        </view>
+
+
+          <view class='unlock_item'>
+          <view class='course_bot'>
+            <view class='course_left'>
+              <image src='/pages/imgs/study3.png'></image>
+              <view>999人参与 | 999人学习</view>
+            </view>
+
+            <!-- 没有解锁的课程的图片 -->
+            <view class='not_unlock_img'>
+                <image></image>
+            </view>
+
+            <view class='course_right'>
+              <view class='book_name'>https://www .grs666.com/ api/v2/app/co mmon/agr eement/lists</view>
+            </view>
+
+          <!-- 已经解锁的图片 -->
+          <view class='open_unlock_img'>
+              <image></image>
+          </view>
+
+          </view>
+
+        </view>
+      </view>
+      <!-- 解锁课程结束 -->
+
+
+    </view>
+    <!-- 切换不同的打卡课程和打卡动态和解锁课程结束 -->
+  </view>
+
+
+</view>

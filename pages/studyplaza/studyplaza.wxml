@@ -1,12 +1,12 @@
 <view class="clockin_list_con">
 
   <view class='main'>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
+    <view class='clickin_camp_item' wx:for="{{list}}" wx:key="{{index}}" wx:if="{{list.length > 0}}">
+      <image src='{{imgUrl+item.picture}}'></image>
       <view class='item_detail'>
-        <view class='item_detail_tit'>学习课程名称1</view>
+        <view class='item_detail_tit'>{{item.title}}</view>
         <view class='clockin_camp_time'>
-         999人参与 | 9999次学习
+        {{item.partake}}人参与 | {{item.browserNum}}浏览次数
         </view>
 
         <view class='clickin_camp_bot'>
@@ -17,87 +17,7 @@
             <view class='item_user'></view>
             <view class='item_user'></view>
           </view>
-          <navigator url='' class='go_clockin'>加入学习</navigator>
-        </view>
-      </view>
-    </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>学习课程名称1</view>
-        <view class='clockin_camp_time'>
-         999人参与 | 9999次学习
-        </view>
-
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入学习</navigator>
-        </view>
-      </view>
-    </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>学习课程名称1</view>
-        <view class='clockin_camp_time'>
-         999人参与 | 9999次学习
-        </view>
-
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入学习</navigator>
-        </view>
-      </view>
-    </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>学习课程名称1</view>
-        <view class='clockin_camp_time'>
-         999人参与 | 9999次学习
-        </view>
-
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入学习</navigator>
-        </view>
-      </view>
-    </view>
-    <view class='clickin_camp_item'>
-      <image src='/pages/imgs/study1.png'></image>
-      <view class='item_detail'>
-        <view class='item_detail_tit'>学习课程名称1</view>
-        <view class='clockin_camp_time'>
-         999人参与 | 9999次学习
-        </view>
-
-        <view class='clickin_camp_bot'>
-          <view class='clockin_left'>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-            <view class='item_user'></view>
-          </view>
-          <navigator url='' class='go_clockin'>加入学习</navigator>
+          <navigator url='/pages/coursedetail/coursedetail' class='go_clockin'>加入学习</navigator>
         </view>
       </view>
     </view>

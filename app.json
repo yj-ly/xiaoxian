@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/coursedetail/coursedetail",
+    "pages/clockindetail/clockindetail",
     "pages/integral/integral",
     "pages/clockin/clockin",
     "pages/my/my",
@@ -9,8 +11,8 @@
     "pages/changeUserMsg/changeUserMsg",
     "pages/discount/discount",
     "pages/clockinplaza/clockinplaza",
-    "pages/studyplaza/studyplaza",
-    "pages/clockindetail/clockindetail"
+    "pages/studyplaza/studyplaza"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

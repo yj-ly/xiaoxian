@@ -41,7 +41,7 @@
                 <view class='item_user'></view>
               </view>
 
-              <navigator url='' class='go_clockin'>去打卡</navigator>
+              <navigator url='/pages/clockindetail/clockindetail' class='go_clockin'>去打卡</navigator>
 
             </view>
           </view>
