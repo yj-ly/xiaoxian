@@ -50,13 +50,13 @@
 
     <!-- 课程简介 -->
     <view class='sourse_dis' wx:if="{{indexClass == 0}}">
-      <audio wx:if="{{detailMsg.isBuy != 0}}">
+      <audio wx:if="{{detailMsg.isBuy != 0 && detailMsg.audioTime > 0 }}" src="{{imgUrl+detailMsg.audioUrl}}" poster="false" bindtap="audioPlay" id='my_audio' > 
         <view class='audio_con'>
           <view class='audio_left'>
             <image src='/pages/imgs/voice_det.png'></image>
             <text class='open_audio'>点击收听</text>
           </view>
-          <view class='audion_time'>60s</view>
+          <view class='audion_time'>{{detailMsg.audioTime}}s</view>
         </view>
 
       </audio>
@@ -70,12 +70,12 @@
               <image src='/pages/imgs/voice_det.png'></image>
               <text class='open_audio'>点击收听</text>
             </view>
-            <view class='audion_time'>60s</view>
+            <view class='audion_time'>0s</view>
           </view>
 
         </audio>
         <text class='noy_buy_tit'>购买之后查看全部内容</text>
-        <view class='buy_btn' bindtap='showPayModelChnage'>￥90立即购买</view>
+        <view class='buy_btn' bindtap='showPayModelChnage'>￥{{detailMsg.money}}立即购买</view>
 
       </view>
 
@@ -364,7 +364,7 @@
 
       <!-- 支付btn -->
       <view class='pay_btn'>
-        <button>去付款</button>
+        <button bindtap='pay'>去付款</button>
       </view>
     </view>
   </view>
@@ -378,7 +378,7 @@
       <view class='discounts_tit'>优惠券</view>
 
       <view class='discounts_list_con_b'>
-        <view class='discounts_list' data-index='{{index}}' wx:for="{{list}}" wx:key="{{index}}" data-moey='{{item.money}}' bindtap='setDiscount'>
+        <view class='discounts_list' data-id='{{item.id}}' data-index='{{index}}' wx:for="{{list}}" wx:key="{{index}}" data-money='{{item.money}}' bindtap='setDiscount'>
           <view class='discounts_list_left'>
             <image src='/pages/imgs/my_discounts.png'></image>
             <view class='discounts_list_msg'>
@@ -387,7 +387,6 @@
             </view>
           </view>
           <view class='discounts_list_right'>
-            {{item.selectBoole}}
             <image src='/pages/imgs/unselected_discounts.png' wx:if="{{item.selectBoole == false}}"></image>
             <image src='/pages/imgs/discounts_select.png' wx:else></image>
           </view>
@@ -401,7 +400,7 @@
 
 
       <!-- 确认选中消费券的按钮 -->
-      <view class='suer_con'>
+      <view class='suer_con' bindtap='showDiscountChange'>
         <button>确定</button>
       </view>
     </view>

@@ -123,12 +123,14 @@
   text-align: center;
   top: 0;
   left: 0;
-  opacity: 0.5;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
 }
+ .not_buy_con .audio_con {
+   opacity: .5;
+ }
 
 .not_buy_con .noy_buy_tit {
   font-size: 36rpx;
